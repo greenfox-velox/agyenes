@@ -7,30 +7,23 @@ h1 {
   color: black;
   }
 
-.paragraph1 {
+.paragraph1, .paragraph2 {
   color: black;
   background-color: white;
   font-family: Times New Roman;
   font-size: 18px;
-  border-style: none solid solid solid;
   border-width: 2px;
   margin: 0px 45px 0px 45px;
   width: 300px;
   height: auto;
   padding: 20px ;
   margin: 0px;
-}
+  }
+
+.paragraph1 {
+  border-style: none solid solid solid;
+  }
 
 .paragraph2 {
-  color: black;
-  background-color: white;
-  font-family: Times New Roman;
-  font-size: 18px;
   border-style: none solid none solid;
-  border-width: 2px;
-  margin: 0px 45px 0px 45px;
-  width: 300px;
-  height: auto;
-  padding: 20px ;
-  margin: 0px;
-}
+  }

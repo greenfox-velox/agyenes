@@ -1,11 +1,5 @@
 
-body {}
-
-div {
-
-}
-
-.apple {
+.apple, .pear, .melon, .potato, .carrot, .onion {
   color: blue;
   background-color: yellow;
   font-family: Times New Roman;
@@ -14,81 +8,19 @@ div {
   width: 200px;
   height: 30px;
   padding: 20px;
+  }
 
-}
-
-.pear {
-  color: blue;
-  background-color: yellow;
-  font-family: Times New Roman;
-  font-size: 30px;
-  border: 4px black solid;
-  width: 200px;
-  height: 30px;
+.box1, .box2 {
+  background-color: green;
+  width: 250px;
+  height: 235px;
   padding: 20px;
-
-}
-
-.melon {
-  color: blue;
-  background-color: yellow;
-  font-family: Times New Roman;
-  font-size: 30px;
-  border: 4px black solid;
-  width: 200px;
-  height: 30px;
-  padding: 20px;
-
-}
-
-.potato {
-  color: blue;
-  background-color: yellow;
-  font-family: Times New Roman;
-  font-size: 30px;
-  border: 4px black solid;
-  width: 200px;
-  height: 30px;
-  padding: 20px;
-
-}
-
-.carrot {
-  color: blue;
-  background-color: yellow;
-  font-family: Times New Roman;
-  font-size: 30px;
-  border: 4px black solid;
-  width: 200px;
-  height: 30px;
-  padding: 20px;
-
-}
-
-.onion {
-  color: blue;
-  background-color: yellow;
-  font-family: Times New Roman;
-  font-size: 30px;
-  border: 4px black solid;
-  width: 200px;
-  height: 30px;
-  padding: 20px;
-
-}
+  }
 
 .box1 {
-  background-color: green;
-  width: 250px;
-  height: 235px;
-  padding: 20px;
   margin: 35px 50px 10px;
-}
+  }
 
 .box2 {
-  background-color: green;
-  width: 250px;
-  height: 235px;
-  padding: 20px;
   margin: 5px 50px 45px;
-}
+  }
