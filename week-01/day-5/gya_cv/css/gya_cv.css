@@ -1,0 +1,85 @@
+
+header {
+  background: url("../image1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1400px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  }
+
+header h1 {
+  color: #222;
+  font-size: 48px;
+  font-family: 'Oswald', sans-serif;
+  line-height: 50px;
+  padding-left: 50px;
+  padding-top: 320px;
+  }
+
+header h1 span {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  }
+
+body, h1, p {
+  margin: 20px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: #222;
+  }
+
+section {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  line-height: 1em;
+  color: #222;
+  width: 1000px;
+  margin-left: 600px;
+  }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  }
+
+blockquote {
+  font-family: 'Oswald', sans-serif;
+  width: 1200px;
+  font-size: 40px;
+  background: #444444 url(../quote.png) no-repeat;
+  background: rgb(68,68,68) url(../grey-quotation-marks-hi.png) no-repeat;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 15px auto;
+  padding: 10px;
+  }
+
+hr {
+  width: 1200px;
+  border: 2px solid;
+  }
+
+h3 + p {
+  font-size: 22px;
+  letter-spacing: normal;
+  line-height: 1.2em;
+  margin: 30px 0px 40px 0px;
+  }
+
+h3, h4 {
+  margin: 0;
+  padding: 0;
+  }
+
+section > h4 {
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-size: 22px;
+  }
