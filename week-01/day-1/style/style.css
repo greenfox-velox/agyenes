@@ -1,14 +1,14 @@
 body {
   background-color: lightgrey;
   margin: 0;
-  }
+}
 
 h1 {
   font-size: 57px;
   font-family: Open Sans;
   color: white;
   text-align: center;
-  }
+}
 
 h2 {
   font-style: italic;
@@ -16,27 +16,27 @@ h2 {
   font-family: Open Sans;
   color: white;
   text-align: center;
-  }
+}
 
 p {
   font-style: normal;
   font-family: Arial;
   margin-left: 30px;
-  }
+}
 
 a {
   font-style: oblique;
   color: blue;
-  }
+}
 
 img.fox {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  }
+}
 
 img.tobzoska {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  }
+}
