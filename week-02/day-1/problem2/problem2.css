@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+  padding: 25px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;#fff;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.cyan {
+  min-height: 100px;
+  max-width: 540px;
+  background: cyan;
+  width: 100%;
+}
+
+.orange {
+  min-height: 500px;
+  min-width: 100px;
+  background: orange;
+  flex-flow: column;
+}
+
+.red {
+  min-height: 500px;
+  width: 300px;
+  background: red;
+  flex-flow: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.purple {
+  min-height: 500px;
+  min-width: 100px;
+  background: purple;
+  flex-flow: column;
+}
+
+.blue {
+  min-height: 100px;
+  max-width: 540px;
+  background: blue;
+  width: 100%;
+  }
+
+.black {
+  height: 50px;
+  width: 50px;
+  background: black;
+  position: absolute;
+  top: 565px;
+  left: 875px;
+}

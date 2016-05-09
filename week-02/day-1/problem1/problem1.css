@@ -1,0 +1,35 @@
+body {
+  color: black;
+  font-size: 18px;
+  font-family: times new roman;
+  line-height: 20px;
+  margin: 0;
+  width: 380px;
+  text-align: justify;
+  }
+
+hr {
+  border: 2px solid black;
+  color: black;
+  margin-left: 15px;
+  margin-right: 15px;
+  }
+
+.nr1, .nr2 {
+  padding: 15px;
+}
+
+p {
+  margin: 0;
+}
+
+.nr1 img{
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.nr2 img{
+  float: right;
+  margin: 15px;
+}
