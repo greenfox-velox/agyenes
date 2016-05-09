@@ -1,0 +1,100 @@
+body {
+  color: black;
+  font-size: 18px;
+  font-family: times new roman;
+  line-height: 20px;
+  margin: 0px
+  max-width: 500px;
+  text-align: justify;
+  }
+
+p {
+  max-width: 500px;
+}
+
+hr {
+  border: 1px solid black;
+  color: black;
+  margin-left: 15px;
+  margin-right: 15px;
+  max-width: 500px;
+  }
+
+.nr1, .nr2 {
+  padding-left: 15px;
+  max-width: 500px;
+}
+
+.nr1 img{
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.nr2 img{
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.message {
+  box-sizing: border-box;
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  left: 130px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.message hr {
+  margin: 0;
+}
+
+.message p {
+  margin: 5px auto;
+  padding: 5px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+span {
+  color: red;
+}
+
+.middle {
+  line-height: 30px;
+  margin-left: 20px;
+}
+
+.buttons {
+  position: absolute;
+  left: 130px;
+  top: 100px;
+}
+
+.button-1, .button-2   {
+  background-color: #C0C0C0;
+  padding: 5px 5px;
+  border-radius: 8px;
+  margin: 10px 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.x-button {
+  background: black;
+  color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: inline;
+  text-align: center;
+  position: absolute;
+  left: 190px;
+  top: -10px;
+  font-size: 14px;
+  }

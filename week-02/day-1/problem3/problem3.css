@@ -7,45 +7,44 @@
 }
 
 .flex-container {
-  display: flex;#fff;
+  display: flex;
   background: #fff;
-  flex-wrap: wrap;
   position: relative;
 }
 
 .cyan {
   min-height: 100px;
-  max-width: 540px;
+  max-width: 560px;
   background: cyan;
   width: 100%;
 }
 
 .orange {
   min-height: 500px;
-  min-width: 100px;
   background: orange;
   flex-flow: column;
+  flex: 1 1 100px;
+  margin-right: 20px;
 }
 
 .red {
   min-height: 500px;
-  width: 300px;
   background: red;
   flex-flow: column;
-  margin-left: 20px;
-  margin-right: 20px;
+  flex: 3 3 300px;
 }
 
 .purple {
   min-height: 500px;
-  min-width: 100px;
   background: purple;
   flex-flow: column;
+  flex: 1 1 100px;
+  margin-left: 20px;
 }
 
 .blue {
   min-height: 100px;
-  max-width: 540px;
+  max-width: 560px;
   background: blue;
   width: 100%;
 }
@@ -55,6 +54,6 @@
   width: 50px;
   background: black;
   position: absolute;
-  top: 535px;
-  left: 355px;
+  top: 435px;
+  left: 360px;
 }
