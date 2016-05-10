@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A form</title>
+    <link rel="stylesheet" href="form.css" type="text/css">
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <form action="" method="get">
+
+        <h2>Profil</h2>
+
+        <section class="basic">
+          <fieldset id="personal">
+            <legend>Személyes adatok</legend>
+
+            <label for="name">Név<span>*</span></label>
+            <input type="text" name="name" id="name"/>
+
+            <div class="birthgender">
+              <div class="birth">
+                <label for="birth">Születési éved</label>
+                <input type="number" name="birth" id="number" placeholder="pl. 1984"/>
+              </div>
+              <div class="gender">
+                <label for="gender">Nemed</label>
+                <input type="radio" name="nem" id="gender">Nő
+                <input type="radio" name="nem" id="gender">Férfi
+              </div>
+            </div>
+
+            <div class="brands">
+              <label for="brands">Milyen márkákat szeretsz?</label>
+              <ul>
+                <li><input type="checkbox" name="brands" id="brands">Adidas</li>
+                <li><input type="checkbox" name="brands" id="brands">Apple</li>
+                <li><input type="checkbox" name="brands" id="brands">Coca-Cola</li>
+                <li><input type="checkbox" name="brands" id="brands">Mazda</li>
+                <li><input type="checkbox" name="brands" id="brands">Nike</li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" name="brands" id="brands">Opel</li>
+                <li><input type="checkbox" name="brands" id="brands">Ray-Ban</li>
+                <li><input type="checkbox" name="brands" id="brands">Starbucks</li>
+                <li><input type="checkbox" name="brands" id="brands">Tesla</li>
+                <li><input type="checkbox" name="brands" id="brands">Yahoo</li>
+              </ul>
+            </div>
+
+            <p>többet is választhatsz!</p>
+          </fieldset>
+
+          <fieldset id="contact">
+            <legend>Kapcsolat</legend>
+
+            <label for="phone">Telefonszám<span>*</span></label>
+            <input type="tel" name="tel" id="phone" placeholder="+36 -- --- ----"/>
+
+            <label for="mail">E-mail-cím<span>*</span></label>
+            <input type="email" name="email" id="mail" placeholder="nev@domain.hu"/>
+
+            <label for="fb">Facebook profilod</label>
+            <input type="url" name="fb" id="fb" placeholder="http://facebook.com/..."/>
+
+            <label for="twitter">Twitter profilod</label>
+            <input type="url" name="tewitter" id="twitter" placeholder="http://twitter.com/...">
+
+            <label for="home">Milyen házban laksz?</label>
+            <select name="home" id="home">
+              <option value="1">Nagy</option>
+              <option value="2">Kicsi</option>
+              <option value="3">A réten lakom</option>
+            </select>
+          </fieldset>
+        </section>
+
+        <section class="intro">
+          <label for="intro">Bemutatkozás<span>*</span></label>
+          <textarea name="intro" id="intro" placeholder="Írj magadról pár mondatot!"></textarea>
+        </section>
+
+        <section class="button">
+          <label for="URL">CV feltöltése</label>
+          <button type="attach-file">File kiválasztása</button>
+          <input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
+        </section>
+
+        <section class="terms">
+          <input type="checkbox">Elfogadom a <a href="felhasznalasi_feltetelek.pdf"> felhasználási feltételeket</a>
+        </section>
+
+        <section class="final-buttons">
+          <button type="submit">Mentés</button>
+          <button type="delete">Űrlap törlése</button>
+        </section>
+
+      </form>
+    </div>
+  </body>
+</html>

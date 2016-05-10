@@ -1,0 +1,138 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+.wrapper {
+  background: #DCD6CD;
+  width: 820px;
+  height: 1000px;
+  padding: 50px 100px 50px 100px;
+  margin: 0;
+}
+
+form {
+  margin: 0, auto;
+  width: 620px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.basic,
+.intro,
+.button,
+.terms,
+.final-buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.basic {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.intro {
+  height: 270px;
+  width: 100%;
+}
+
+#intro {
+  height: 270px;
+  width: 620px;
+  padding: 10px;
+}
+
+.final-buttons {
+  height: 120px;
+}
+
+#personal,
+#contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.birthgender {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+fieldset {
+  width: 300px;
+  height: 420px;
+  padding: 0;
+}
+
+.birth {
+  width: 120px;
+}
+
+.gender {
+  display: inline-block;
+  width: 180px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  padding: 5px;
+}
+
+p {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+legend {
+  width: 300px;
+  background: #938C97;
+  color: white;
+  font-size: 18px;
+  padding: 10px 0 10px 10px;
+}
+
+input, select {
+  height: 37px;
+  padding: 10px 0 10px 10px;
+}
+
+label {
+  height: 36px;
+  font-size: 16px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  height: auto;
+}
+
+input[type="text"], #contact input, select {
+  width: 100%;
+}
+
+input[type="number"] {
+  width: 80px;
+}
+
+ul {
+  list-style: none;
+  line-height: 1.5em;
+  padding: 5px;
+}
+
+span {
+  color: red;
+}
