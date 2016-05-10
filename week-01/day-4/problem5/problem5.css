@@ -14,12 +14,23 @@ span {
   color: red;
   }
 
-em {
-  color:blue;
-  font-style: italic;
-  }
-
 .symbols {
   font-family: "Lucida Console";
   font-size: 20px;
   }
+
+ul {
+  color:blue;
+}
+
+ul:first-child {
+  color: red;
+}
+
+ul:first-child {
+  color: red;
+}
+
+.black-items {
+  color: black;
+}
