@@ -18,7 +18,7 @@
           <fieldset id="personal">
             <legend>Személyes adatok</legend>
 
-            <label for="name">Név<span>*</span></label>
+            <label for="name">Név<span class="red">*</span></label>
             <input type="text" name="name" id="name"/>
 
             <div class="birthgender">
@@ -28,8 +28,10 @@
               </div>
               <div class="gender">
                 <label for="gender">Nemed</label>
-                <input type="radio" name="nem" id="gender">Nő
-                <input type="radio" name="nem" id="gender">Férfi
+                  <div class="noferfi">
+                    <input type="radio" name="nem" id="gender">Nő
+                    <input type="radio" name="nem" id="gender">Férfi
+                  </div>
               </div>
             </div>
 
@@ -51,16 +53,16 @@
               </ul>
             </div>
 
-            <p>többet is választhatsz!</p>
+            <p>Többet is választhatsz!</p>
           </fieldset>
 
           <fieldset id="contact">
             <legend>Kapcsolat</legend>
 
-            <label for="phone">Telefonszám<span>*</span></label>
+            <label for="phone">Telefonszám<span class="red">*</span></label>
             <input type="tel" name="tel" id="phone" placeholder="+36 -- --- ----"/>
 
-            <label for="mail">E-mail-cím<span>*</span></label>
+            <label for="mail">E-mail-cím<span class="red">*</span></label>
             <input type="email" name="email" id="mail" placeholder="nev@domain.hu"/>
 
             <label for="fb">Facebook profilod</label>
@@ -78,26 +80,27 @@
           </fieldset>
         </section>
 
-        <section class="intro">
-          <label for="intro">Bemutatkozás<span>*</span></label>
+        <div class="intro">
+          <label for="intro">Bemutatkozás<span class="red">*</span></label>
           <textarea name="intro" id="intro" placeholder="Írj magadról pár mondatot!"></textarea>
-        </section>
+        </div>
 
-        <section class="button">
+        <div class="upload">
           <label for="URL">CV feltöltése</label>
-          <button type="attach-file">File kiválasztása</button>
-          <input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
-        </section>
+          <button class="final-buttons" type="attach-file">File kiválasztása</button>
+          <input type="button">
+        </div>
 
-        <section class="terms">
-          <input type="checkbox">Elfogadom a <a href="felhasznalasi_feltetelek.pdf"> felhasználási feltételeket</a>
-        </section>
+        <section class="finishing">
+          <div class="terms">
+            <input type="checkbox">Elfogadom a <a href="felhasznalasi_feltetelek.pdf"> felhasználási feltételeket</a>
+          </div>
 
-        <section class="final-buttons">
-          <button type="submit">Mentés</button>
-          <button type="delete">Űrlap törlése</button>
+          <div class="final">
+            <button class="final-buttons" name="submit">Mentés</button>
+            <button class="final-buttons" name="delete">Űrlap törlése</button>
+          </div>
         </section>
-
       </form>
     </div>
   </body>
