@@ -1,26 +1,139 @@
 body {
   background-color: #f6f6f6;
-  display: block;
-}
-
-body {
+  display: flex;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
+.wrapper {
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+}
+
 header {
   min-height: 100px;
   background: cyan;
   width: 100%;
+  position: relative;
+  background-color: #f6f6f6;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: sans-serif;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 3000px;
-  padding: 0;
-  box-sizing: border-box;
+main {
+  height: 100%;
+  padding: 20px;
+  border: 1px blue;
+  background-color: white
+  position: relative;
+}
+
+.side {
+  padding-left: 20px;
+  display: block;
+  width: 160px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #f6f6f6;
+  color: #1c5bc2;
+  font-size: 12px;
+  line-height: 14px;
+  list-style-type: none;
+}
+
+.side p {
+  color: black;
+}
+.side ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid grey;
+}
+
+.interaction ul {
+  padding-left: 5px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+header li {
+  list-style-type: none;
+  padding: 0 3px;
+  text-align: center;
+  display: inline;
+  flex-flow: row;
+}
+
+.row-1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.row-2a {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.row-2b {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+a {
+  color: #0645ad;
+}
+
+img pic1,
+img pic2,
+img pic3,
+img pic4 {
+  height: 277px;
+  width: 220px,
+  background color: #ceff68;
+}
+
+.hgroup p {
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.disamb {
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  display: block;
+  background color: rgb(105, 0, 0);
+  border-bottom: 1px solid grey;
+  font-family: Georgia, times;
+  font-size: 29px;
+  line-height: 37px;
+  margin: 0;
+}
+
+h2 {
+  background color: rgb(105, 0, 0);
+  border-bottom: 1px solid grey;
+}
+
+h3 {
+  background color: rgb(105, 0, 0);
+  border-bottom: 1px solid grey;
 }
 
 .main-header {
@@ -28,33 +141,13 @@ header {
   width: 100%;
   max-height: 140px;
   position: absolute;
-  border: 1px solid;
 }
 
-main {
-  margin-left: 180px;
-  min-height: 3000px;
-  padding: 0;
-  border: 1px solid;
-  background-color: white
-}
-
-a {
-  color: #0645ad;
-}
-
-.side {
-  display: block;
-  position: absolute;
-  top: 100px;
-  width: 180px;
-  height: 100%;
-  left: 0;
-  background-color: blue;
-}
+/*jobboldali dobozok */
 
 .infobox {
   display: block;
+  background-color: #f6f6f6;
   float: right;
   clear: right;
   position: relative;
@@ -62,24 +155,71 @@ a {
   background color: #ceff68;
   height: 500px;
   width: 270px;
-  border: 1px solid black;
+  border: 1px solid grey;
 }
 
-.summary {
-  position: relative;
-  margin-top: 81px;
-  border: 1px solid black;
-  height: auto;
-}
-
-img {
+.pic1,
+.pic2,
+.pic3,
+.pic4 {
+  display: block;
+  float: right;
+  clear: right;
   background color: #ceff68;
+  height: 221px;
+  width: 227px;
+}
+
+.contents {
+  display: block;
+  background-color: #f6f6f6;
+  color: #1c5bc2;
+  font-size: 13px;
+  line-height: 21px;
+  max-width: 115px;
+  border: 1px solid grey;
+  padding: 7px;
+}
+
+.contents p {
+  color: black;
+  margin: 0;
+}
+
+.contents ol {
+  margin: 0;
+  padding: 0 15px;
+}
+
+.indented,
+.indented-2 {
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.details {
+  display: block;
+}
+
+.references ol {
+  columns: 3;
+}
+
+.end-of-page {
+  display: block;
+}
+
+.timelines {
+  display: block;
+  border: 1px solid black;
+}
+
+footer {
+  margin-left: 180px;
 }
 
 p {
-  background color: rgb(155, 0, 0);
-}
-
-h1 {
-  background color: rgb(105, 0, 0);
+  font-size: 14px;
+  line-height: 22px;
 }
