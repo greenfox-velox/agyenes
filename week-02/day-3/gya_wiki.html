@@ -3,6 +3,7 @@
   <head>
     <title>wikipedia page</title>
     <link rel="stylesheet" href="gya_wiki.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900italic,700,400italic' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
   </head>
 
@@ -50,7 +51,7 @@
 
       <div class="Print-export">
         <p>Print/export</p>
-        <ul>
+        <ul class>
           <li>Create a book</li>
           <li>Download as PDF</li>
           <li>Printable version</li>
@@ -115,6 +116,9 @@
               <li>Read</li>
               <li>Edit</li>
               <li>View history</li>
+              <li>
+                <input type="text" name="name" id="name" placeholder="Search"/>
+              </li>
             </ul>
           </div>
         </div>
@@ -129,27 +133,28 @@
         </div>
 
         <div class="infobox">
-          <p>Margaret Hamilton</p>
+          <p><strong>Margaret Hamilton</strong></p>
           <img class="pic1" src="pic1.jpg">
+          <p>Hamilton in 1995</p>
           <table>
             <tr>
-              <td>Born</td>
+              <td><strong>Born</strong></td>
               <td>August 17, 1936 (age 79) Paoli, Indiana</td>
             </tr>
             <tr>
-              <td>Education</td>
+              <td><strong>Education</strong></td>
               <td>Earlham College</td>
             </tr>
             <tr>
-              <td>Occupation</td>
+              <td><strong>Occupation</strong></td>
               <td>CEO of Hamilton Technologies, Inc.<br>Computer scientist</td>
             </tr>
             <tr>
-              <td>Spouse(s)</td>
+              <td><strong>Spouse(s)</strong></td>
               <td>James Cox Hamilton</td>
             </tr>
             <tr>
-              <td>Relatives</td>
+              <td><strong>Relatives</strong></td>
               <td>James Cox Chambers (son-in-law)</td>
             </tr>
           </table>
@@ -228,10 +233,11 @@
           </div>
 
           <div class="NASA">
-            <div class="pic2">
-              <img class="pic2" src="pic2.jpg">
-            </div>
             <h2>NASA</h2>
+            <div class="pic2box">
+              <img class="pic2" src="pic2.jpg">
+              <p>Hamilton during her time as lead <br>Apollo flight software designer.</p>
+            </div>
             <p>Hamilton then joined the Charles Stark Draper Laboratory at MIT, which at the time was
               working on the Apollo space mission. She eventually became the director and supervisor of
               software programming for Apollo and Skylab.[8]</p>
@@ -252,11 +258,11 @@
           </div>
 
           <div class="Apollo">
-            <div class="pic3">
-              <p>Margaret Hamilton standing next to listings of the Apollo Guidance Computer (AGC) source code</p>
-              <img class="pic3" src="pic3.gif">
-            </div>
             <h3>Apollo 11</h3>
+            <div class="pic3box">
+              <img class="pic3" src="pic3.gif">
+              <p>Margaret Hamilton standing next to<br>listings of the Apollo Guidance<br>Computer (AGC) source code</p>
+            </div>
             <p>In one of the critical moments of the Apollo 11 mission, Hamilton's team's work and J. Halcombe
               Laning's operating system design,[10] in the Apollo Guidance Computer software prevented an abort
               of landing on the moon.[11] Three minutes before the Lunar lander reached the Moon's surface,
@@ -292,11 +298,11 @@
             systems design and software development.[3][17][18][19]</p>
 
           <div class="Legacy">
-            <div class="pic4">
-              <p>Official photo for NASA, 1989.</p>
-              <img class="pic4" src="pic4.jpg">
-            </div>
             <h2>Legacy</h2>
+            <div class="pic4box">
+              <img class="pic4" src="pic4.jpg">
+              <p>Official photo for NASA,<br>1989.</p>
+            </div>
             <p>Hamilton popularized the term "software engineering",[20] coined first by Anthony Oettinger.[21][22]
                Software engineering, at the time, was not taken as seriously compared to other engineering, it was
                not regarded as a science. She used the term "software engineering" to distinguish the difference
@@ -392,6 +398,9 @@
 
       <footer>
         <p>This page was last modified on 5 May 2016, at 16:44.</p>
+        <p>Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may
+          apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered
+          trademark of the Wikimedia Foundation, Inc., a non-profit organization.</p>
       </footer>
 
     </div>
