@@ -19,7 +19,7 @@
             <legend>Személyes adatok</legend>
 
             <label for="name">Név<span class="red">*</span></label>
-            <input type="text" name="name" id="name"/>
+            <input type="text" name="name" id="name"/ required>
 
             <div class="birthgender">
               <div class="birth">
@@ -29,28 +29,32 @@
               <div class="gender">
                 <label for="gender">Nemed</label>
                   <div class="noferfi">
-                    <input type="radio" name="nem" id="gender">Nő
-                    <input type="radio" name="nem" id="gender">Férfi
+                    <label for="no">Nő</label>
+                    <input type="radio" name="nem" id="no">
+                    <label for="ferfi">Férfi</label>
+                    <input type="radio" name="nem" id="ferfi">
                   </div>
               </div>
             </div>
 
             <div class="brands">
               <label for="brands">Milyen márkákat szeretsz?</label>
-              <ul>
-                <li><input type="checkbox" name="brands" id="brands">Adidas</li>
-                <li><input type="checkbox" name="brands" id="brands">Apple</li>
-                <li><input type="checkbox" name="brands" id="brands">Coca-Cola</li>
-                <li><input type="checkbox" name="brands" id="brands">Mazda</li>
-                <li><input type="checkbox" name="brands" id="brands">Nike</li>
-              </ul>
-              <ul>
-                <li><input type="checkbox" name="brands" id="brands">Opel</li>
-                <li><input type="checkbox" name="brands" id="brands">Ray-Ban</li>
-                <li><input type="checkbox" name="brands" id="brands">Starbucks</li>
-                <li><input type="checkbox" name="brands" id="brands">Tesla</li>
-                <li><input type="checkbox" name="brands" id="brands">Yahoo</li>
-              </ul>
+              <div class="list">
+                <ul class="column1">
+                  <li><label for="no">Adidas</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Apple</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Coca-Cola</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Mazda</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Nike</label><input type="checkbox" name="brands" id="brands"></li>
+                </ul>
+                <ul class="column2">
+                  <li><label for="no">Opel</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Ray-ban</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Starbucks</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Tesla</label><input type="checkbox" name="brands" id="brands"></li>
+                  <li><label for="no">Yahoo</label><input type="checkbox" name="brands" id="brands"></li>
+                </ul>
+              </div>
             </div>
 
             <p>Többet is választhatsz!</p>
@@ -60,10 +64,10 @@
             <legend>Kapcsolat</legend>
 
             <label for="phone">Telefonszám<span class="red">*</span></label>
-            <input type="tel" name="tel" id="phone" placeholder="+36 -- --- ----"/>
+            <input type="tel" name="tel" id="phone" placeholder="+36 -- --- ----"/ required>
 
             <label for="mail">E-mail-cím<span class="red">*</span></label>
-            <input type="email" name="email" id="mail" placeholder="nev@domain.hu"/>
+            <input type="email" name="email" id="mail" placeholder="nev@domain.hu"/ required>
 
             <label for="fb">Facebook profilod</label>
             <input type="url" name="fb" id="fb" placeholder="http://facebook.com/..."/>

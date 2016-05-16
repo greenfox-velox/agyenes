@@ -5,11 +5,16 @@
   font-family: Helvetica;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
-  background: #DCD6CD;
+  background: #dcd6cd;
   width: 820px;
   height: 1000px;
-  padding: 50px 100px 50px 100px;
+  padding: 50px 100px;
   margin: 0;
 }
 
@@ -35,9 +40,9 @@ form {
   flex-wrap: wrap;
 }
 
-.brands {
+.list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .basic {
@@ -100,8 +105,38 @@ fieldset {
 }
 
 .gender {
-  float: right;
+  display: flex;
+  flex-flow: column;
   width: 140px;
+  justify-content: space-around;;
+}
+
+.gender label {
+  padding: 0;
+}
+
+.noferfi {
+  display: flex;
+  justify-content: space-around;
+}
+
+.brands .list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.noferfi label,
+.brands label {
+  font-weight: normal;
+}
+
+.brands input {
+  align-items: flex-end;
+  padding: 0 20px;
+}
+
+.brands ul {
+  width: 150px;
 }
 
 h2 {
@@ -117,7 +152,7 @@ p {
 
 legend {
   width: 300px;
-  background: #938C97;
+  background: #938c97;
   color: white;
   font-size: 18px;
   padding: 10px 0 10px 10px;
