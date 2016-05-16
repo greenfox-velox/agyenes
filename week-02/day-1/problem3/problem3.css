@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.cyan {
+header {
   min-height: 100px;
   max-width: 560px;
   background: cyan;
@@ -42,7 +42,7 @@
   margin-left: 20px;
 }
 
-.blue {
+footer {
   min-height: 100px;
   max-width: 560px;
   background: blue;

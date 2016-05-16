@@ -7,13 +7,13 @@
 }
 
 .flex-container {
-  display: flex;#fff;
-  background: #fff;
+  display: flex;
+  background: #ffffff;
   flex-wrap: wrap;
   position: relative;
 }
 
-.cyan {
+header {
   min-height: 100px;
   max-width: 540px;
   background: cyan;
@@ -34,6 +34,7 @@
   flex-flow: column;
   margin-left: 20px;
   margin-right: 20px;
+  position: relative;
 }
 
 .purple {
@@ -43,7 +44,7 @@
   flex-flow: column;
 }
 
-.blue {
+footer {
   min-height: 100px;
   max-width: 540px;
   background: blue;
@@ -55,6 +56,6 @@
   width: 50px;
   background: black;
   position: absolute;
-  top: 535px;
-  left: 355px;
+  bottom: 20px;
+  right: 20px;
 }
