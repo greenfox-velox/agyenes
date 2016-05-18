@@ -7,11 +7,10 @@ is_bonus = False
 # and is_bonus is False decrement ab by 1
 # if is_bonus is True ab should remain the same
 
-if credits >= 50 and is_bonus == False:
-    ab -=2
-elif credits <= 50 and is_bonus == False:
-    ab -=1
-else:
-    pass
+if not is_bonus:
+    if credits >= 50:
+        ab -=2
+    else:
+        ab -=1
 
 print(ab)
