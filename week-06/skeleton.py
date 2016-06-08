@@ -1,0 +1,34 @@
+from tkinter import *
+import random
+
+map_1 = [[1,0,0,1,0,1,0,0,0,0],
+        [0,0,0,1,0,1,0,1,1,0],
+        [0,1,1,1,0,1,0,1,1,0],
+        [0,0,0,0,0,1,0,0,0,0],
+        [1,1,1,1,0,1,1,1,1,0],
+        [0,1,0,1,0,0,0,0,1,0],
+        [0,1,0,1,0,0,0,0,1,0],
+        [0,0,0,0,0,1,1,0,1,0],
+        [0,1,1,1,0,0,0,0,1,0],
+        [0,0,0,1,0,1,1,0,1,0],
+        [0,1,0,1,0,1,0,0,0,0]]
+
+def random_position():
+    random_x = random.randint(1, 10)
+    random_y = random.randint(1, 10)
+    return [random_x, random_y]
+
+class Skeleton(object):
+
+    def __init__(self, skeleton_x, skeleton_y):
+        self.skeleton_x = skeleton_x
+        self.skeleton_y = skeleton_y
+        self.skeleton_image = PhotoImage(file="assets/skeleton.png")
+
+    def draw(self, canvas):
+        if map_1[self.skeleton_y][self.skeleton_x] == 0:
+            canvas.create_image(self.skeleton_x * 72, self.skeleton_y * 72, anchor=NW, image=self.skeleton_image)
+        else:
+            self.skeleton_x = random.randint(0, 9)
+            self.skeleton_y = random.randint(0, 9)
+            self.draw(canvas)
