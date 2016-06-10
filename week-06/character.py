@@ -1,61 +1,50 @@
 from tkinter import *
-import random
 
-map_1 = [[1,0,0,1,0,1,0,0,0,0],
-        [0,0,0,1,0,1,0,1,1,0],
-        [0,1,1,1,0,1,0,1,1,0],
-        [0,0,0,0,0,1,0,0,0,0],
-        [1,1,1,1,0,1,1,1,1,0],
-        [0,1,0,1,0,0,0,0,1,0],
-        [0,1,0,1,0,0,0,0,1,0],
-        [0,0,0,0,0,1,1,0,1,0],
-        [0,1,1,1,0,0,0,0,1,0],
-        [0,0,0,1,0,1,1,0,1,0],
-        [0,1,0,1,0,1,0,0,0,0]]
+class Hero(object):
 
-class Character(object):
-
-    def __init__(self, hero_x, hero_y):
+    def __init__(self, hero_x, hero_y, canvas):
         self.hero_x = hero_x
         self.hero_y = hero_y
+        self.canvas = canvas
         self.hero_image = PhotoImage(file="assets/hero-down.png")
 
-    def draw(self, canvas):
-        if map_1[self.hero_y][self.hero_x] == 0:
-            canvas.create_image(self.hero_x * 72, self.hero_y * 72, anchor=NW, image=self.hero_image)
-        else:
-            self.hero_x = random.randint(0, 9)
-            self.hero_y = random.randint(0, 9)
-            self.draw(canvas)
+    def draw(self):
+        self.canvas.create_image(self.hero_x * 72, self.hero_y * 72, anchor=NW, image=self.hero_image)
 
     def move_up(self):
-        if self.hero_y > 0 and map_1[self.hero_y - 1][self.hero_x] == 0:
-            self.hero_y = self.hero_y - 1
-            self.hero_image = PhotoImage(file="assets/hero-up.png")
-        else:
-            self.hero_y = self.hero_y
-            self.hero_image = PhotoImage(file="assets/hero-up.png")
+        self.hero_y = self.hero_y - 1
+        self.hero_image = PhotoImage(file="assets/hero-up.png")
 
     def move_down(self):
-        if self.hero_y < 9 and map_1[self.hero_y + 1][self.hero_x] == 0:
-            self.hero_y = self.hero_y + 1
-            self.hero_image = PhotoImage(file="assets/hero-down.png")
-        else:
-            self.hero_y = self.hero_y
-            self.hero_image = PhotoImage(file="assets/hero-down.png")
+        self.hero_y = self.hero_y + 1
+        self.hero_image = PhotoImage(file="assets/hero-down.png")
 
     def move_right(self):
-        if self.hero_x < 9 and map_1[self.hero_y][self.hero_x + 1] == 0:
-            self.hero_x = self.hero_x + 1
-            self.hero_image = PhotoImage(file="assets/hero-right.png")
-        else:
-            self.hero_x = self.hero_x
-            self.hero_image = PhotoImage(file="assets/hero-right.png")
+        self.hero_x = self.hero_x + 1
+        self.hero_image = PhotoImage(file="assets/hero-right.png")
 
     def move_left(self):
-        if self.hero_x > 0 and map_1[self.hero_y][self.hero_x - 1] == 0:
-            self.hero_x = self.hero_x - 1
-            self.hero_image = PhotoImage(file="assets/hero-left.png")
-        else:
-            self.hero_x = self.hero_x
-            self.hero_image = PhotoImage(file="assets/hero-left.png")
+        self.hero_x = self.hero_x - 1
+        self.hero_image = PhotoImage(file="assets/hero-left.png")
+
+class Skeleton(object):
+
+    def __init__(self, skeleton_x, skeleton_y, canvas):
+        self.skeleton_x = skeleton_x
+        self.skeleton_y = skeleton_y
+        self.canvas = canvas
+        self.skeleton_image = PhotoImage(file="assets/skeleton.png")
+
+    def draw(self):
+        self.canvas.create_image(self.skeleton_x * 72, self.skeleton_y * 72, anchor=NW, image=self.skeleton_image)
+
+class Boss(object):
+
+    def __init__(self, boss_x, boss_y, canvas):
+        self.boss_x = boss_x
+        self.boss_y = boss_y
+        self.canvas = canvas
+        self.boss_image = PhotoImage(file="assets/boss.png")
+
+    def draw(self):
+        self.canvas.create_image(self.boss_x * 72, self.boss_y * 72, anchor=NW, image=self.boss_image)

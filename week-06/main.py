@@ -1,97 +1,137 @@
 from tkinter import *
 import random
-from character import Character
-from skeleton import Skeleton
-from boss import Boss
+from character import Hero
+from character import Skeleton
+from character import Boss
+from move import HeroMove
+from dice import Dice
 
 root = Tk()
 
+canvas = Canvas(root, width = 720, height = 800, bg='white')
 
-def random_position():
-    random_x = random.randint(0, 9)
-    random_y = random.randint(0, 9)
-    return [random_x, random_y]
+class DrawMap(object):
 
-field_size = 72
-no_of_fields_h = 10
-no_of_fields_v = 10
-a = PhotoImage(file="assets/floor.png")
-b = PhotoImage(file="assets/wall.png")
-char = Character(random_position()[0], random_position()[1])
-skeleton_1 = Skeleton(random_position()[0], random_position()[1])
-skeleton_2 = Skeleton(random_position()[0], random_position()[1])
-skeleton_3 = Skeleton(random_position()[0], random_position()[1])
-boss = Boss(random_position()[0], random_position()[1])
-canvas = Canvas(root, width='720', height='820  ', bg='white')
-canvas.create_rectangle(0, 720, 800, 800, fill="white")
+    def __init__(self):
+        self.no_of_fields_h = 10
+        self.no_of_fields_v = 10
+        self.field_size = 72
+        self.floor_image = PhotoImage(file="assets/floor.png")
+        self.wall_image = PhotoImage(file="assets/wall.png")
+        self.canvas = canvas
+        self.dice = Dice()
 
-map_1 = [[1,0,0,1,0,1,0,0,0,0],
-        [0,0,0,1,0,1,0,1,1,0],
-        [0,1,1,1,0,1,0,1,1,0],
-        [0,0,0,0,0,1,0,0,0,0],
-        [1,1,1,1,0,1,1,1,1,0],
-        [0,1,0,1,0,0,0,0,1,0],
-        [0,1,0,1,0,0,0,0,1,0],
-        [0,0,0,0,0,1,1,0,1,0],
-        [0,1,1,1,0,0,0,0,1,0],
-        [0,0,0,1,0,1,1,0,1,0],
-        [0,1,0,1,0,1,0,0,0,0]]
+        dice_result_1 = self.dice.roll_the_dice()
+        self.hero = Hero(dice_result_1[0], dice_result_1[1], canvas)
+        draw_hero(self.hero)
 
-def make_dict(map_x):
-    map_dict = []
-    for i in range(len(map_x)):
-        for j in range(len(map_x[i])):
-            row = {}
-            row['x'] = j
-            row['y'] = i
-            if map_x[i][j] == 0:
-                row['type'] = 'floor'
-            if map_x[i][j] == 1:
-                row['type'] = 'wall'
-            if map_x[i][j] == 2:
-                row['type'] = 'hero'
-            map_dict.append(row)
-    return map_dict
+        dice_result_2 = self.dice.roll_the_dice()
+        self.boss = Boss(dice_result_2[0], dice_result_2[1], canvas)
+        draw_boss(self.boss)
 
-def screen_drawer(x, y):
-    for i in range(x):
-        for j in range(y):
-            if map_1[j][i] == 0:
-                canvas.create_image(i * field_size, j * field_size, anchor=NW, image=a)
-            elif map_1[j][i] == 1:
-                canvas.create_image(i * field_size, j * field_size, anchor=NW, image=b)
-    canvas.create_rectangle(0, 720, 720, 800, fill="grey")
-    canvas.create_rectangle(10, 730, 710, 790, fill="white")
-    canvas.create_text(360, 760, text='Hero (Level 1) HP: 8/10 | DP: 8 | SP: 6', font=('Arial', 24, 'bold'))
+        dice_result_3 = self.dice.roll_the_dice()
+        self.skeleton_1 = Skeleton(dice_result_3[0], dice_result_3[1], canvas)
+        draw_skeleton_1(self.skeleton_1)
 
-    char.draw(canvas)
-    skeleton_1.draw(canvas)
-    skeleton_2.draw(canvas)
-    skeleton_3.draw(canvas)
-    boss.draw(canvas)
+        dice_result_4 = self.dice.roll_the_dice()
+        self.skeleton_2 = Skeleton(dice_result_4[0], dice_result_4[1], canvas)
+        draw_skeleton_2(self.skeleton_2)
 
-def move_down(event):
-    char.move_down()
-    screen_drawer(no_of_fields_h, no_of_fields_v)
+        dice_result_5 = self.dice.roll_the_dice()
+        self.skeleton_3 = Skeleton(dice_result_5[0], dice_result_5[1], canvas)
+        draw_skeleton_3(self.skeleton_3)
 
-def move_up(event):
-    char.move_up()
-    screen_drawer(no_of_fields_h, no_of_fields_v)
+        self.map_1 = [[1,0,0,1,0,1,0,0,0,0],
+                    [0,0,0,1,0,1,0,1,1,0],
+                    [0,1,1,1,0,1,0,1,1,0],
+                    [0,0,0,0,0,1,0,0,0,0],
+                    [1,1,1,1,0,1,1,1,1,0],
+                    [0,1,0,1,0,0,0,0,1,0],
+                    [0,1,0,1,0,0,0,0,1,0],
+                    [0,0,0,0,0,1,1,0,1,0],
+                    [0,1,1,1,0,0,0,0,1,0],
+                    [0,0,0,1,0,1,1,0,1,0],
+                    [0,1,0,1,0,1,0,0,0,0]]
 
-def move_left(event):
-    char.move_left()
-    screen_drawer(no_of_fields_h, no_of_fields_v)
+    def screen_drawer(self):
+        for i in range(self.no_of_fields_h):
+            for j in range(self.no_of_fields_v):
+                if self.map_1[j][i] == 0:
+                    self.canvas.create_image(i * self.field_size, j * self.field_size, anchor=NW, image=self.floor_image)
+                elif self.map_1[j][i] == 1:
+                    self.canvas.create_image(i * self.field_size, j * self.field_size, anchor=NW, image=self.wall_image)
 
-def move_right(event):
-    char.move_right()
-    screen_drawer(no_of_fields_h, no_of_fields_v)
+    def draw_hero(dice_result_1):
+        if self.map_1.is_obstacle(dice_result_1[0], dice_result_1[1]) == False:
+            self.hero = Hero(dice_result_1[0], dice_result_1[1], canvas)
+            self.hero.draw()
+        else:
+            draw_hero(dice_result_1)
 
-root.bind("<Up>", move_up)
-root.bind("<Down>", move_down)
-root.bind("<Right>", move_right)
-root.bind("<Left>", move_left)
+    def draw_boss(dice_result_2):
+        if self.map_1.is_obstacle(dice_result_2[0], dice_result_2[1]) == False:
+            self.boss = Boss(dice_result_2[0], dice_result_2[1], canvas)
+            self.boss.draw()
+        else:
+            draw_boss(dice_result_2)
 
-screen_drawer(no_of_fields_h, no_of_fields_v)
+    def draw_skeleton_1(dice_result_3):
+        if self.map_1.is_obstacle(dice_result_3[0], dice_result_3[1]) == False:
+            self.skeleton_1 = Skeleton(dice_result_3[0], dice_result_3[1], canvas)
+            self.skeleton_1.draw()
+        else:
+            draw_skeleton_1(dice_result_3)
+
+    def draw_skeleton_2(dice_result_4):
+        if self.map_1.is_obstacle(dice_result_4[0], dice_result_4[1]) == False:
+            self.skeleton_2 = Skeleton(dice_result_4[0], dice_result_4[1], canvas)
+            self.skeleton_2.draw()
+        else:
+            draw_skeleton_2(dice_result_4)
+
+    def draw_skeleton_3(dice_result_5):
+        if self.map_1.is_obstacle(dice_result_5[0], dice_result_5[1]) == False:
+            self.skeleton_3 = Skeleton(dice_result_5[0], dice_result_5[1], canvas)
+            self.skeleton_3.draw()
+        else:
+            draw_skeleton_3(dice_result_5)
+
+    def stats_drawer(self):
+        self.info_box_height = 80
+        self.canvas.create_rectangle(0, self.field_size * self.no_of_fields_v, self.field_size * self.no_of_fields_h, self.field_size * self.no_of_fields_h + self.info_box_height, fill="grey")
+        self.canvas.create_rectangle(10, self.field_size * self.no_of_fields_v + 10, self.field_size * self.no_of_fields_h + 10, self.field_size * self.no_of_fields_h + self.info_box_height - 10, fill="white")
+        self.canvas.create_text(self.field_size * self.no_of_fields_h/2, self.field_size * self.no_of_fields_h + self.info_box_height/2, text='Hero (Level 1) HP: 8/10 | DP: 8 | SP: 6', font=('Arial', 24, 'bold'))
+
+    def is_obstacle(self, x, y):
+        if self.map_1[x][y] == 0:
+            return True
+        else:
+            return False
+
+    def move_down(event):
+        self.hero.move_down()
+        screen_drawer(no_of_fields_h, no_of_fields_v)
+
+    def move_up(event):
+        self.hero.move_up()
+        screen_drawer(no_of_fields_h, no_of_fields_v)
+
+    def move_left(event):
+        self.hero.move_left()
+        screen_drawer(no_of_fields_h, no_of_fields_v)
+
+    def move_right(event):
+        self.hero.move_right()
+        screen_drawer(no_of_fields_h, no_of_fields_v)
+
+starting_map = DrawMap()
+starting_map.screen_drawer()
+starting_map.stats_drawer()
+
+root.bind("<Up>", starting_map.move_up)
+root.bind("<Down>", starting_map.move_down)
+root.bind("<Right>", starting_map.move_right)
+root.bind("<Left>", starting_map.move_left)
 
 canvas.pack()
 
