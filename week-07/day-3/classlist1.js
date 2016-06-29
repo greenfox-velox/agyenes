@@ -1,14 +1,23 @@
 'use strict';
 
-var image_url = document.querySelector('img');
-console.log(image_url.getAttribute('src'));
+var cat = document.querySelector('.cat');
+var all_paragraphs = document.querySelectorAll('p');
+var dolphin = all_paragraphs[3]
+var apple = document.querySelector('p');
+var balloon = all_paragraphs[1];
 
-image_url.setAttribute('src', 'http://www.vampyres-online.com/images/klaus_kinski_big.jpg');
+if (dolphin.classList.value === 'dolphin') {
+  apple.textContent = 'pear';
+}
 
-var anchor = document.querySelector('a');
-anchor.setAttribute('href', 'http://www.greenfoxacademy.com/');
+if (apple.classList.value === 'apple') {
+  cat.textContent = 'dog';
+}
 
-var second_button = document.querySelector('.this-one');
-second_button.disabled = true;
+apple.setAttribute('style', 'color: red');
 
-second_button.textContent = 'Don\'t click me!'
+balloon.setAttribute('style', 'border-radius: 10%');
+
+
+//
+//
