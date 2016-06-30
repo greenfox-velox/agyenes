@@ -1,13 +1,24 @@
 'use strict';
 
-// buttons
+var imagecount = 1
+var total = 10
 
-var button_left = document.querySelector('.selected .left_holder');
-var button_right = document.querySelector('.selected .right_holder');
-var small_button_left = document.querySelector('.thumbnails .left_holder');
-var small_button_right = document.querySelector('.thumbnails .right_holder');
+function slide (x) {
+  var Image = document.getElementById('img');
+  imagecount = imagecount + x;
+  if (imagecount > total) { imagecount =1;}
+  if (imagecount < 1) { imagecount = total;}
+  Image.src = "Images/img" + imagecount +".jpg";
+}
 
-button_left.addEventListener('click', countListItems);
-button_right.addEventListener('click', countListItems);
-small_button_left.addEventListener('click', countListItems);
-small_button_right.addEventListener('click', countListItems);
+function step (y) {
+  var little_images = document.querySelectorAll('.little_pictures');
+  imagecount = imagecount + y;
+  Image.src = "Images/img" + imagecount +".jpg";
+}
+
+function highlight (y) {
+  var Image = document.getElementById('img');
+  var little_image = document.querySelectorAll('.little_pictures')[y];
+  Image = little_image;
+}

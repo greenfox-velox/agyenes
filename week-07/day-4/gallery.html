@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>My Project: The Gallery</title>
     <link rel="stylesheet" href="gallery.css" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
   </head>
 
@@ -15,38 +15,40 @@
 
       <section class="selected">
         <div class="left holder">
-          <img src="left.png">
+          <img onClick="slide(-1)" src="Images/left.png">
         </div>
         <div class="selected_picture">
-          <p>The selected picture</p>
-          <img src="https://filmgrab.files.wordpress.com/2013/06/0376.jpg?w=1200&h=">
+          <h2>You have selected the following picture</h2>
+          <p>(click on the thumbnails or arrows to change it)</p>
+          <img src="Images/img1.jpg" id="img"/>
         </div>
         <div class="right holder">
-          <img src="right.png">
+          <img onClick="slide(1)" src="Images/right.png">
         </div>
       </section>
 
       <section class ="thumbnails">
 
         <div class="left holder">
-          <img src="ll.png">
+          <img onClick="step(-1)" src="Images/ll.png">
         </div>
 
         <div class="little_pictures">
           <p>other pictures</p>
-          <img src="https://filmgrab.files.wordpress.com/2013/06/0477.jpg?w=1200&h=">
-          <img src="https://filmgrab.files.wordpress.com/2013/06/2877.jpg?w=1200&h=">
-          <img src="https://filmgrab.files.wordpress.com/2013/06/4977.jpg?w=1200&h=">
-          <img src="https://filmgrab.files.wordpress.com/2013/06/5277.jpg?w=1200&h=">
-          <img src="https://filmgrab.files.wordpress.com/2013/06/5576.jpg?w=1200&h=">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Margaret_Hamilton_1995.jpg/800px-Margaret_Hamilton_1995.jpg">
-          <img src="https://filmgrab.files.wordpress.com/2013/06/4477.jpg?w=1200&h=">
-          <img src="https://filmgrab.files.wordpress.com/2013/06/5776.jpg?w=1200&h=">
-          <img src="https://filmgrab.files.wordpress.com/2013/06/2077.jpg?w=1200&h=">
+          <img onClick="highlight()" src="Images/img1.jpg">
+          <img onClick="highlight()" src="Images/img2.jpg">
+          <img onClick="highlight()" src="Images/img3.jpg">
+          <img onClick="highlight()" src="Images/img4.jpg">
+          <img onClick="highlight()" src="Images/img5.jpg">
+          <img onClick="highlight()" src="Images/img6.jpg">
+          <img onClick="highlight()" src="Images/img7.jpg">
+          <img onClick="highlight()" src="Images/img8.jpg">
+          <img onClick="highlight()" src="Images/img9.jpg">
+          <img onClick="highlight()" src="Images/img10.jpg">
         </div>
 
         <div class="right holder">
-          <img src="rl.png">
+          <img onClick="step(1)" src="Images/rl.png">
         </div>
 
       </section>

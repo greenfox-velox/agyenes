@@ -4,11 +4,11 @@
 }
 
 body {
-  background-color: #f6f6f6;
+  background-color: #f6f6e6;
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Hind', sans-serif;
   text-align: center;
 }
 
@@ -19,45 +19,59 @@ body {
   text-align: center;
 }
 
-  .wrapper p {
-    padding: 10px 0;;
-    margin: 10px;
-  }
-
   .wrapper h1 {
     font-family: 'Anton', sans-serif;
     text-align: center;
     align-items: center;
-    font-size: 36px;
+    color: #003f71;
+    font-size: 46px;
     padding: 5px 0;;
+  }
+
+  .wrapper p {
+    padding: 10px 0;
+    font-family: 'Hind', sans-serif;
   }
 
 .selected, .thumbnails {
   background-color: #3CB371;
-  margin: 5px;
+  margin: 0 10px;
   padding: 5px;
   font-size: 24px;
-  justify-content: space-around;
   display: flex;
   align-items: center;
   font-family: 'Anton', sans-serif;
   color: white;
+  border-radius: 25px;
 }
 
-  .selected p {
-    font-size: 30px;
+  .thumbnails {
+    margin: 30px 60px;
   }
 
-  .selected img {
+  .selected p {
+    padding: 5px 0;;
+    font-size: 20px;
+    font-family: 'Hind', sans-serif;
+  }
+
+  .selected h2 {
+    padding: 5px 0;;
+    font-size: 26px;
+    font-family: 'Hind', sans-serif;
+  }
+
+  #img {
     text-align: center;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
+    margin-bottom: 20px;
   }
 
   .holder img {
     height: 100px;
-    width: 180px;
-    margin: 0 30px;
+    width: 220px;
+    margin: 0 20px;
   }
 
   .little_pictures {
@@ -67,9 +81,13 @@ body {
     white-space: nowrap;
   }
 
+  #thumbnail {
+    height: 140px;
+  }
+
   .little_pictures p {
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
   }
 
   .thumbnails img {
