@@ -61,14 +61,14 @@ app.put('/todos/:id', function(req, res) {
   }
 });
 
-// app.delete('/todos/:id', function(req, res) {
-//   for (var i = 0; i < todos.length; i++) {
-//     if (todos[i].id === +req.params.id) {
-//       todos[i].text = req.body["text"];
-//       todos[i].completed = req.body["completed"];
-//       res.json(todos[i]);
-//     }
-//   }
-// });
+app.delete('/todos/:id', function(req, res) {
+  for (var i = 0; i < todos.length; i++) {
+    if (todos[i].id === +req.params.id) {
+      todos[i]["destroyed"] = true;
+      res.json(todos[i]);
+      todos.splice(i, 1);
+    }
+  }
+});
 
 app.listen(3000);
