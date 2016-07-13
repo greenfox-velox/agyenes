@@ -5,42 +5,46 @@ var http = require('http');
 var app = express();
 var bodyParser = require('body-parser');
 var id = 0;
+var mysql = require("mysql");
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "'root'",
+  password: "12345",
+  database: "todos"
+});
+
+con.connect(function(err){
+  if(err){
+    console.log("Error connecting to Db");
+    return;
+  }
+  console.log("Connection established");
+});
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-var todos = [
-    {
-        "completed": false,
-        "id": 1,
-        "text": "Buy milk"
-    },
-    {
-        "completed": false,
-        "id": 2,
-        "text": "Make dinner"
-    },
-    {
-        "completed": false,
-        "id": 3,
-        "text": "Save the world"
-    }
-];
-
 app.get('/todos', function(req, res) {
-  res.send(todos);
+  con.query('SELECT * FROM todos;',function(err,rows){
+    if(err) {
+      console.log(err.toString());
+      return;
+    }
+      console.log(rows);
+      res.send(rows);
+  })
 });
 
-function getOneTodo(todoItem) {
-  for (var i = 0; i < todos.length; i++) {
-    if (todos[i].id === todoItem) {
-      return todos[i];
-    }
-  }
-}
-
 app.get('/todos/:id', function(req, res) {
-  res.json(getOneTodo(+req.params.id));
+  con.query('SELECT * FROM todos WHERE todo_id = ?;', req.params.id, function(err,rows){
+    if(err) {
+      console.log(err.toString());
+      return;
+    }
+      console.log(rows);
+      res.send(rows);
+  })
 });
 
 app.post('/todos', function(req, res) {
